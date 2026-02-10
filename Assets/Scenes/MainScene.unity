@@ -374,8 +374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -536, y: 240}
-  m_SizeDelta: {x: 142, y: 23}
+  m_AnchoredPosition: {x: -949, y: 515}
+  m_SizeDelta: {x: 168, y: 28}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &708344965
 MonoBehaviour:
@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 821940429}
   - component: {fileID: 821940428}
   - component: {fileID: 821940431}
+  - component: {fileID: 821940432}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -630,11 +631,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   maxHP: 100
-  currentHP: 0
   damageAmount: 20
   damageCooldown: 1
   hpBarImage: {fileID: 708344965}
   useScale: 1
+--- !u!114 &821940432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821940425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91ca09fa1b6b2b4f935e5bab24383d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::testeffect
+  slashEffectPrefab: {fileID: 9202468214549590313, guid: 622819a0362d75849a8046c55f7b3c73, type: 3}
+  spawnOffset: {x: 0, y: 0}
+  usePlayerDirection: 1
 --- !u!1 &837236347
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,8 +763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -465, y: 240}
-  m_SizeDelta: {x: 142, y: 23}
+  m_AnchoredPosition: {x: -865, y: 515}
+  m_SizeDelta: {x: 168, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861466348
 MonoBehaviour:
@@ -823,8 +838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -465, y: 240}
-  m_SizeDelta: {x: 150, y: 30}
+  m_AnchoredPosition: {x: -865, y: 515}
+  m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990134806
 MonoBehaviour:
