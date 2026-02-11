@@ -9,7 +9,7 @@ public class testeffect : MonoBehaviour
     
     void Update()
     {
-        // Spaceキーで再生テスト（新Input System対応）
+        // Spaceキーで再生テスト
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             PlaySlashEffect();

@@ -22,37 +22,16 @@ public class Playermove : MonoBehaviour
 
     void Update()
     {
-        // キー入力を取得（新Input System使用）
-        float horizontal = 0f;
-        float vertical = 0f;
+        // New Input Systemでキー入力を取得
+        moveInput = Vector2.zero;
         
-        var keyboard = Keyboard.current;
-        if (keyboard != null)
+        if (Keyboard.current != null)
         {
-            // W: 上移動
-            if (keyboard.wKey.isPressed)
-            {
-                vertical = 1f;
-            }
-            // S: 下移動
-            if (keyboard.sKey.isPressed)
-            {
-                vertical = -1f;
-            }
-            // A: 左移動
-            if (keyboard.aKey.isPressed)
-            {
-                horizontal = -1f;
-            }
-            // D: 右移動
-            if (keyboard.dKey.isPressed)
-            {
-                horizontal = 1f;
-            }
+            if (Keyboard.current.wKey.isPressed) moveInput.y = 1f;
+            if (Keyboard.current.sKey.isPressed) moveInput.y = -1f;
+            if (Keyboard.current.aKey.isPressed) moveInput.x = -1f;
+            if (Keyboard.current.dKey.isPressed) moveInput.x = 1f;
         }
-        
-        // 入力値を保存
-        moveInput = new Vector2(horizontal, vertical);
         
         // 移動ベクトルを正規化（斜め移動時の速度が速くなりすぎないように）
         if (moveInput.magnitude > 1f)
