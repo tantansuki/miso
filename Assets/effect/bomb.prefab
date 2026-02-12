@@ -4915,7 +4915,7 @@ GameObject:
   - component: {fileID: 5553504590898065866}
   - component: {fileID: 6740389304445566572}
   m_Layer: 0
-  m_Name: slash
+  m_Name: bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4950,7 +4950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EffectDamage
   damage: 10
-  hitDuration: 0.2
+  hitDuration: 0.5
 --- !u!58 &6740389304445566572
 CircleCollider2D:
   m_ObjectHideFlags: 0

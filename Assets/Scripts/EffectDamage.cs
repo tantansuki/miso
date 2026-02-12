@@ -19,6 +19,7 @@ public class EffectDamage : MonoBehaviour
     
     void DisableHit()
     {
+        Debug.Log("EffectDamage: Hit disabled");
         canHit = false;
         
         // Colliderを無効化
