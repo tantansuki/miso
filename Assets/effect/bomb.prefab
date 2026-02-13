@@ -4951,6 +4951,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EffectDamage
   damage: 10
   hitDuration: 0.5
+  effectType: 1
+  shootSpeed: 8
 --- !u!58 &6740389304445566572
 CircleCollider2D:
   m_ObjectHideFlags: 0
