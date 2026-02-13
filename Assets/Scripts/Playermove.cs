@@ -7,6 +7,7 @@ public class Playermove : MonoBehaviour
     [SerializeField] public float moveSpeed = 5f;
     
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     private Vector2 moveInput;
     
     void Start()
@@ -17,6 +18,14 @@ public class Playermove : MonoBehaviour
         if (rb == null)
         {
             Debug.LogError("Rigidbody2Dコンポーネントが見つかりません！");
+        }
+        
+        // SpriteRendererコンポーネントを取得
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("SpriteRendererコンポーネントが見つかりません！");
         }
     }
 
@@ -37,6 +46,21 @@ public class Playermove : MonoBehaviour
         if (moveInput.magnitude > 1f)
         {
             moveInput.Normalize();
+        }
+        
+        // スプライトの向きを変更（右に移動するときは反転）
+        if (spriteRenderer != null)
+        {
+            if (moveInput.x > 0)
+            {
+                // 右方向に移動：反転
+                spriteRenderer.flipX = true;
+            }
+            else if (moveInput.x < 0)
+            {
+                // 左方向に移動：通常
+                spriteRenderer.flipX = false;
+            }
         }
     }
     

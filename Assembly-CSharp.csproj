@@ -53,6 +53,8 @@
     <Compile Include="Assets\Scripts\tekimove.cs" />
     <Compile Include="Assets\Scripts\EffectDamage.cs" />
     <Compile Include="Assets\Scripts\Playermove.cs" />
+    <Compile Include="Assets\Scripts\enemyspawn.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

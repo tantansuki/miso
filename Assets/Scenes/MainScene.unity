@@ -582,7 +582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::testeffect
   slashEffectPrefab: {fileID: 9202468214549590313, guid: 622819a0362d75849a8046c55f7b3c73, type: 3}
   spawnOffset: {x: 0, y: 0}
-  usePlayerDirection: 1
+  effectLifetime: 2
+  autoRotateToMouse: 1
 --- !u!60 &821940433
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -906,6 +907,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861466346}
   m_CullTransparentMesh: 1
+--- !u!1 &971368116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971368118}
+  - component: {fileID: 971368117}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &971368117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971368116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec436f7cdc94094f82e0f2749509f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyspawn
+  enemyPrefabs:
+  - {fileID: 4700071744809930645, guid: 66c267202a949484d9d602e3ac95ac0a, type: 3}
+  spawnInterval: 2
+  spawnDistance: 1
+  autoSpawn: 1
+  spawnFromTop: 1
+  spawnFromBottom: 1
+  spawnFromLeft: 1
+  spawnFromRight: 1
+--- !u!4 &971368118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971368116}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42045, y: -0.41791, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990134804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,3 +1350,4 @@ SceneRoots:
   - {fileID: 1015482299}
   - {fileID: 1998018307}
   - {fileID: 1262024552}
+  - {fileID: 971368118}

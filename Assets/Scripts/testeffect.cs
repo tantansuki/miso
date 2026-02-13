@@ -18,8 +18,8 @@ public class testeffect : MonoBehaviour
     
     void Update()
     {
-        // Spaceキー：エフェクトタイプに応じて配置or射出
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        // 左クリック：エフェクトタイプに応じて配置or射出
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             PlayEffectByType();
         }
