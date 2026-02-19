@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 693abb8dc4916314bb9b88142176f428
+guid: 138dc05c023732d439f5d4dc35694a10
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: syujinnkou_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 157
-        width: 359
-        height: 331
+        x: 22
+        y: 143
+        width: 750
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
