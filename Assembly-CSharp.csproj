@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\testeffect.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\BoneCollision.cs" />
     <Compile Include="Assets\Scripts\TekiHealth.cs" />
     <Compile Include="Assets\Scripts\tekimove.cs" />
     <Compile Include="Assets\Scripts\EffectDamage.cs" />

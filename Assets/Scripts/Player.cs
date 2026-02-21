@@ -49,8 +49,15 @@ public class Player : MonoBehaviour
         }
     }
     
-    private void TakeDamage()
+    // ボーンのColliderから呼べるようにpublicに変更
+    public void TakeDamage()
     {
+        // クールダウンチェック
+        if (Time.time < lastDamageTime + damageCooldown)
+        {
+            return;
+        }
+        
         lastDamageTime = Time.time;
         currentHP -= damageAmount;
         
