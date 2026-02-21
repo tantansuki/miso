@@ -5,10 +5,9 @@ public class Playermove : MonoBehaviour
 {
     [Header("移動設定")]
     [SerializeField] public float moveSpeed = 5f;
-    [SerializeField] private float positionCorrectionStrength = 0.5f; // 位置補正の強さ（0-1）
+    [SerializeField] private float positionCorrectionStrength = 0.1f; // 位置補正の強さ（0-1）
     
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
     private Vector2 moveInput;
     private Rigidbody2D[] childRigidbodies; // 子のRigidbody2D配列
     private Vector2[] childInitialOffsets; // 子の初期オフセット
@@ -40,14 +39,6 @@ public class Playermove : MonoBehaviour
                 childInitialOffsets[i] = (Vector2)childRigidbodies[i].transform.position - rb.position;
             }
         }
-        
-        // SpriteRendererコンポーネントを取得（ボーンにある場合は子から取得）
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        
-        if (spriteRenderer == null)
-        {
-            Debug.LogError("SpriteRendererコンポーネントが見つかりません！");
-        }
     }
 
     void Update()
@@ -67,21 +58,6 @@ public class Playermove : MonoBehaviour
         if (moveInput.magnitude > 1f)
         {
             moveInput.Normalize();
-        }
-        
-        // スプライトの向きを変更（右に移動するときは反転）
-        if (spriteRenderer != null)
-        {
-            if (moveInput.x > 0)
-            {
-                // 右方向に移動：反転
-                spriteRenderer.flipX = true;
-            }
-            else if (moveInput.x < 0)
-            {
-                // 左方向に移動：通常
-                spriteRenderer.flipX = false;
-            }
         }
     }
     
